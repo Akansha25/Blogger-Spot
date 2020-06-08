@@ -1,0 +1,34 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<nav class="navbar navbar-expand-sm bg-info navbar-dark fixed-top navbar-inverse">
+
+  <a class="navbar-brand" href="#">
+    <img width="30px"src="../assets/images/bingo.PNG">{{title}}
+  </a>
+
+  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapsible">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="collapsible">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item" *ngIf="!user">
+        <a class="nav-link text-light" [routerLink]="['/login']" id="login">Login</a>
+      </li>
+      <li class="nav-item" *ngIf="user">
+     <a class="nav-link text-light">Welcome {{user}}</a>
+      </li>
+      <li class="nav-item" *ngIf="user">
+        <a class="nav-link text-light" (click)="logout()" id="logout">Logout</a>
+      </li>
+      <li class="nav-item" *ngIf="!user">
+          <a class="nav-link text-light" [routerLink]="['/register']" id="register">Signup</a>
+        </li>
+    
+    </ul>
+
+  </div>
+
+</nav>
+<div class="contentstyle">
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div>
+            <h3 class="text-info text-center">Login</h3></div>
+            <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+                <div ngModelGroup="userdata" #usrdata="ngModelGroup">
+
+                <div class="form-group">
+                    <label for="username">Username</label>   
+                    <input type="text" id="usrnam" class="form-control" [(ngModel)]="uname" name="username" #usrname="ngModel" required > 
+                 
+                </div>
+
+    
+                <div class="form-group">
+                        <label for="password">password</label>
+                        <input type="password" id="pswd" class="form-control" [(ngModel)]="pwd" name="passwrd" #paswd="ngModel" required>
+                </div>
+
+                </div>   
+                <span class="alert alert-danger" *ngIf="!usrdata.valid && usrdata.dirty">please enter valid credentials</span>
+                  
+
+              <br>  <button type="submit" [disabled]="!f.valid"class="btn btn-primary">submit</button>
+                
+            </form>
+            <div class="text-center" *ngIf="errortext!=null">
+                    <span class="alert alert-danger">{{ errortext }}</span>
+            </div>
+            <div class="text-center" *ngIf="successtext!=null">
+                    <span class="alert alert-success">{{ successtext }}</span>
+            </div>
+        </div>
+    </div>
+</div>

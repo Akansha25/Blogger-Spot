@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div>
+            <h3 class="text-info text-center">New Article</h3></div>
+            <form (ngSubmit)="postArticle(add)" #add="ngForm">
+                <div ngModelGroup="articledata" #artidata="ngModelGroup">
+
+                <div class="form-group">
+                    <label for="title">Title</label>   
+                    <input type="text" id="ttl" class="form-control" [(ngModel)]="title" name="titl" #arttitle="ngModel" required > 
+                 
+                </div>
+
+    
+                <div class="form-group">
+                        <label for="body">Content</label>
+                        <textarea id="artbody" class="form-control" rows="20" cols="200" [(ngModel)]="body" name="bdy" #artbdy="ngModel" required></textarea>
+                </div>
+
+                </div>   
+              
+              <br>  <button type="submit" class="btn btn-primary">Post</button>
+                
+            </form>
+            </div></div></div>
