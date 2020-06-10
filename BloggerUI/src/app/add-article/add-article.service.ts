@@ -7,16 +7,16 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AddArticleService {
-  //url:string;
+  url:string;
   constructor(private http:HttpClient,private router:Router) { 
-    //this.url='http://localhost:3000/';
+    this.url='http://localhost:3000/';
   }
 
 addArticle(article){
 
   const reqheaders = new HttpHeaders().set('Content-Type', 'application/json');
  
-  return this.http.post(`/articles`,article,{headers:reqheaders}) as Observable<any>
+  return this.http.post(`${this.url}articles`,article,{headers:reqheaders}) as Observable<any>
 
 }
   

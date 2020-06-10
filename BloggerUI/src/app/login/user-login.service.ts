@@ -6,14 +6,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserLoginService {
-  //url : string;
+  url : string;
   constructor( private http : HttpClient ) { 
-   // this.url= 'http://localhost:3000/'
+   this.url= 'http://localhost:3000/'
   }
 
   login(cred : UserLoginService) : Observable<any>{
     var reqHeader=new HttpHeaders({"No-Auth":'True'});
-  return this.http.post(`/login`, cred,{headers:reqHeader}) as Observable<any>;
+  return this.http.post(`${this.url}login`, cred,{headers:reqHeader}) as Observable<any>;
 
 }
 

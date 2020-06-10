@@ -8,11 +8,11 @@ import { Observable } from 'rxjs';
 export class UserRegService {
 
  
-  //url='http://localhost:3000/';
+  url='http://localhost:3000/';
    constructor( private http:HttpClient ) { }
 
   register( formValue : UserRegService): Observable<any>{
     var reqHeader=new HttpHeaders({"No-Auth":'True'});
-    return this.http.post(`/register`,formValue,{headers:reqHeader}) as Observable<any>
+    return this.http.post(`${this.url}register`,formValue,{headers:reqHeader}) as Observable<any>
  }
 }

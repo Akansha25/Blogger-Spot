@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 
 export class HomeService {
-//url:string;
+url:string;
 private user=new Subject();
 public userEmitter=this.user.asObservable();
 
@@ -18,7 +18,7 @@ userEmitChange(usr:any){
 }
 
   constructor(private http:HttpClient,private router:Router) {
-    //this.url='http://localhost:3000/'
+    this.url='http://localhost:3000/'
    }
 
    
@@ -42,7 +42,7 @@ userEmitChange(usr:any){
   home(){
  const reqheaders = new HttpHeaders().set('Content-Type', 'application/json');
  
-    return this.http.get(`/articles`,{headers:reqheaders});
+    return this.http.get(`${this.url}articles`,{headers:reqheaders});
 
  }
 
