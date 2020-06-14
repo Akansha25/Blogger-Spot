@@ -20468,7 +20468,7 @@
   /***/
   function _(module, exports, __webpack_require__) {
     __webpack_require__(
-    /*! C:\Users\Akansha Shrivastava\Desktop\Akansha\Blogger Spot\Blogger_Spot_ui\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\es5-polyfills.js */
+    /*! E:\GitReporitory\Blogger-Spot\BloggerUI\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\es5-polyfills.js */
     "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js");
 
     __webpack_require__(
@@ -20476,15 +20476,15 @@
     "./node_modules/zone.js/dist/zone-legacy.js");
 
     __webpack_require__(
-    /*! C:\Users\Akansha Shrivastava\Desktop\Akansha\Blogger Spot\Blogger_Spot_ui\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\jit-polyfills.js */
+    /*! E:\GitReporitory\Blogger-Spot\BloggerUI\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\jit-polyfills.js */
     "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js");
 
     __webpack_require__(
-    /*! C:\Users\Akansha Shrivastava\Desktop\Akansha\Blogger Spot\Blogger_Spot_ui\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\es5-jit-polyfills.js */
+    /*! E:\GitReporitory\Blogger-Spot\BloggerUI\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\es5-jit-polyfills.js */
     "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-jit-polyfills.js");
 
     module.exports = __webpack_require__(
-    /*! C:\Users\Akansha Shrivastava\Desktop\Akansha\Blogger Spot\Blogger_Spot_ui\src\polyfills.ts */
+    /*! E:\GitReporitory\Blogger-Spot\BloggerUI\src\polyfills.ts */
     "./src/polyfills.ts");
     /***/
   }

@@ -861,15 +861,15 @@
     "./node_modules/@angular/router/fesm2015/router.js");
 
     let AddArticleService = class AddArticleService {
-      //url:string;
       constructor(http, router) {
         this.http = http;
-        this.router = router; //this.url='http://localhost:3000/';
+        this.router = router;
+        this.url = 'http://localhost:3000/';
       }
 
       addArticle(article) {
         const reqheaders = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Content-Type', 'application/json');
-        return this.http.post("/articles", article, {
+        return this.http.post("".concat(this.url, "articles"), article, {
           headers: reqheaders
         });
       }
@@ -1523,10 +1523,10 @@
     let HomeService = class HomeService {
       constructor(http, router) {
         this.http = http;
-        this.router = router; //url:string;
-
+        this.router = router;
         this.user = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
-        this.userEmitter = this.user.asObservable(); //this.url='http://localhost:3000/'
+        this.userEmitter = this.user.asObservable();
+        this.url = 'http://localhost:3000/';
       }
 
       userEmitChange(usr) {
@@ -1553,7 +1553,7 @@
 
       home() {
         const reqheaders = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Content-Type', 'application/json');
-        return this.http.get("/articles", {
+        return this.http.get("".concat(this.url, "articles"), {
           headers: reqheaders
         });
       }
@@ -1732,16 +1732,16 @@
     "./node_modules/@angular/common/fesm2015/http.js");
 
     let UserLoginService = class UserLoginService {
-      //url : string;
       constructor(http) {
-        this.http = http; // this.url= 'http://localhost:3000/'
+        this.http = http;
+        this.url = 'http://localhost:3000/';
       }
 
       login(cred) {
         var reqHeader = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
           "No-Auth": 'True'
         });
-        return this.http.post("/login", cred, {
+        return this.http.post("".concat(this.url, "login"), cred, {
           headers: reqHeader
         });
       }
@@ -1916,16 +1916,16 @@
     "./node_modules/@angular/common/fesm2015/http.js");
 
     let UserRegService = class UserRegService {
-      //url='http://localhost:3000/';
       constructor(http) {
         this.http = http;
+        this.url = 'http://localhost:3000/';
       }
 
       register(formValue) {
         var reqHeader = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
           "No-Auth": 'True'
         });
-        return this.http.post("/register", formValue, {
+        return this.http.post("".concat(this.url, "register"), formValue, {
           headers: reqHeader
         });
       }
@@ -2049,7 +2049,7 @@
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! C:\Users\Akansha Shrivastava\Desktop\Akansha\Blogger Spot\Blogger_Spot_ui\src\main.ts */
+    /*! E:\GitReporitory\Blogger-Spot\BloggerUI\src\main.ts */
     "./src/main.ts");
     /***/
   }

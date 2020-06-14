@@ -376,8 +376,8 @@ if (content.locals) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Akansha Shrivastava\Desktop\Akansha\Blogger Spot\Blogger_Spot_ui\src\styles.css */"./src/styles.css");
-module.exports = __webpack_require__(/*! C:\Users\Akansha Shrivastava\Desktop\Akansha\Blogger Spot\Blogger_Spot_ui\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
+__webpack_require__(/*! E:\GitReporitory\Blogger-Spot\BloggerUI\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! E:\GitReporitory\Blogger-Spot\BloggerUI\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
 
 
 /***/ })

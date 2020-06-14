@@ -431,15 +431,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let AddArticleService = class AddArticleService {
-    //url:string;
     constructor(http, router) {
         this.http = http;
         this.router = router;
-        //this.url='http://localhost:3000/';
+        this.url = 'http://localhost:3000/';
     }
     addArticle(article) {
         const reqheaders = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Content-Type', 'application/json');
-        return this.http.post(`/articles`, article, { headers: reqheaders });
+        return this.http.post(`${this.url}articles`, article, { headers: reqheaders });
     }
 };
 AddArticleService.ctorParameters = () => [
@@ -832,10 +831,9 @@ let HomeService = class HomeService {
     constructor(http, router) {
         this.http = http;
         this.router = router;
-        //url:string;
         this.user = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
         this.userEmitter = this.user.asObservable();
-        //this.url='http://localhost:3000/'
+        this.url = 'http://localhost:3000/';
     }
     userEmitChange(usr) {
         this.user.next(usr);
@@ -856,7 +854,7 @@ let HomeService = class HomeService {
     }
     home() {
         const reqheaders = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Content-Type', 'application/json');
-        return this.http.get(`/articles`, { headers: reqheaders });
+        return this.http.get(`${this.url}articles`, { headers: reqheaders });
     }
 };
 HomeService.ctorParameters = () => [
@@ -972,14 +970,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let UserLoginService = class UserLoginService {
-    //url : string;
     constructor(http) {
         this.http = http;
-        // this.url= 'http://localhost:3000/'
+        this.url = 'http://localhost:3000/';
     }
     login(cred) {
         var reqHeader = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({ "No-Auth": 'True' });
-        return this.http.post(`/login`, cred, { headers: reqHeader });
+        return this.http.post(`${this.url}login`, cred, { headers: reqHeader });
     }
 };
 UserLoginService.ctorParameters = () => [
@@ -1092,13 +1089,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let UserRegService = class UserRegService {
-    //url='http://localhost:3000/';
     constructor(http) {
         this.http = http;
+        this.url = 'http://localhost:3000/';
     }
     register(formValue) {
         var reqHeader = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({ "No-Auth": 'True' });
-        return this.http.post(`/register`, formValue, { headers: reqHeader });
+        return this.http.post(`${this.url}register`, formValue, { headers: reqHeader });
     }
 };
 UserRegService.ctorParameters = () => [
@@ -1180,7 +1177,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Akansha Shrivastava\Desktop\Akansha\Blogger Spot\Blogger_Spot_ui\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! E:\GitReporitory\Blogger-Spot\BloggerUI\src\main.ts */"./src/main.ts");
 
 
 /***/ })
